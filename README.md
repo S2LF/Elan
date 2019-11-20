@@ -13,4 +13,7 @@ Slack: https://elandevweb.slack.com/
 
 Gérer les accents en HTML: https://www.scriptol.fr/creation-site-web/accents-html.php
 
+Stats utilisation navigateurs: https://www.w3counter.com/globalstats.php
+
+
 http://yakafokon.detected.fr/
