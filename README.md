@@ -17,5 +17,7 @@ Stats utilisation navigateurs: https://www.w3counter.com/globalstats.php
 
 Emmet sheet cheat: https://docs.emmet.io/cheat-sheet/
 
+Tu n'utilisera point le comic sans:
+https://www.google.com/search?client=firefox-b-d&q=tu+n%27utiliseras+point+le+comic+sans
 
 http://yakafokon.detected.fr/
