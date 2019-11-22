@@ -4,9 +4,8 @@
     box-sizing: border-box;
     }
 
-
 .wrap {
-    width: 75%;
+    max-width: 1200px;
     margin:auto;
     margin-bottom: 20px;
 }
@@ -27,7 +26,7 @@ nav {
 
 /* Content  */
 #ban {
-    height: 250px;
+    height: 300px;
     width: 100%;
     position: relative
 
@@ -53,8 +52,6 @@ nav {
     color:white;
 }
 
-
-
 .margeinTop {
     margin-top: 30px;
 }
@@ -69,19 +66,25 @@ nav {
 
 section {
     text-align: justify;
-    margin: 10px 10px 10px 0;
+    margin: 10px 70px 10px 0;
 }
-
 
 aside {
     background-color: black;
     color: white;
-    padding: 10px;
-    padding-bottom: 30px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+aside>div:first-child{
+    flex: 1;
+}
+
 aside h2 {
     text-align: center;
 }
+
 aside figure {
     text-align: center;
 }
@@ -89,27 +92,50 @@ aside figure {
 .logoAside {
     height: 50px;
     width: 50px;
+
+}
+
+#space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+   
+    
 }
 
 .nomarging {
     margin: 0;
-    color:black
+    color:black;
 }
 
-.ancre {
-    background-color: red;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-
+#button {
+    text-align: center;
+    margin-top:-2px;
 }
+
 
 /* Footer */
 
-footer {
-    justify-content: space-between;
+
+footer>div:first-child {
+    flex:0.5;
 }
 
 .marginImage {
     margin-right: 2px;
+}
+
+#marginForm {
+    margin-bottom: 20px;
+}
+
+#spaceFooter {
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    flex: 2;
+
 }
