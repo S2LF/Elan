@@ -4,14 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Rio</title>
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>Corgis-City</title>
 </head>
 <body>
     
 <div class="wrap">
 
     <header class="container">
-        <img class="logo" src="assets/img/corgi-logo.jpg" alt="100x100">
+        <a href=""><img class="logo" id="ancre" src="assets/img/corgi-logo.jpg" alt="100x100"></a>
             <nav  class="center">
                 <a class="menu" href="">ACCUEIL</a>
                 <a class="menu" href="">ORGANISATION</a>
@@ -22,7 +23,7 @@
 
     <hr>
     
-    <div style="position: relative;">
+    <div id="banniere">
         <img id="ban" src="assets/img/corgi-ban.jpg" alt="bannière avec 4 corgi">
         <div class="show-article">
             <span>Le corgi, le chien royale par excellence</span>
@@ -31,31 +32,37 @@
     </div>
     <main class="container margeinTop">
         <section>
-            <h1>PLUS D'INFORMATIONS SUR LES CORGIS</h1>
+            <h1><img class="logoQuestion" src="assets/img/black-and-white-question-mark-png-help-mark-question-icon-256.png" alt=""> PLUS D'INFORMATIONS SUR LES CORGIS</h1>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum eros ac turpis faucibus, at gravida lacus hendrerit. Praesent consequat lobortis mi quis faucibus. Nunc vel ante turpis. Suspendisse vulputate bibendum condimentum. Etiam eu tortor ut erat tincidunt faucibus in et sem. Cras ullamcorper vel dolor id consectetur. Nulla consequat congue felis ac pharetra. </p>
             <p>Nulla ac aliquam tellus, ac sodales ipsum. Donec id gravida est. Pellentesque vel scelerisque velit. Curabitur quis nisi turpis. In ullamcorper leo at sem tincidunt malesuada in id metus. Donec vitae sapien vel augue sodales iaculis. Maecenas et velit sed eros consequat ornare. Vivamus aliquet nibh nec libero commodo rhoncus. In fringilla nulla eu euismod facilisis. Etiam congue blandit sollicitudin. Nam auctor, justo ac pulvinar tempor, lectus tortor semper ante, sed pretium nisl purus suscipit lectus. Integer vel metus nisi. Integer molestie quis turpis eget tristique. </p>
             <p>Aliquam rhoncus est elementum nibh semper consectetur. Mauris dictum dictum porta. Vestibulum a ultrices nulla, id consequat libero. Duis non leo et arcu commodo iaculis. Sed facilisis sapien libero, vel volutpat lorem sagittis in. Morbi blandit est vitae efficitur egestas. Sed convallis molestie nulla eget pellentesque. Duis vel semper augue. </p>
+
+            <div class="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/glii-kazad8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
-                        
+
         <aside>
             <div>
                 <h2>&Agrave; PROPOS DES CORGIS</h2>
                 <figure>
-                        <img style="height:200px; width:200px;" src="assets/img/corgi.jpg" alt="Drapeau de la ville de Rio">
+                        <img src="assets/img/corgi.jpg" alt="Drapeau de la ville de Rio">
                 </figure>
                 
                 <p>Il s’agit de chiens de forme allongée et bas sur pattes, d’une constitution vigoureuse, rapides et actifs. Les Welsh Corgi donnent une impression de substance et de résistance dans un volume réduit. La tête ressemble à celle du renard. Le crâne est plutôt large et plat entre les oreilles ; le museau est légèrement pointu.</p>
-                <p>Orginine: Grande-Bretagne</p>
-                <p>Espérance de vie : 12 à 15 ans</p>
+                <p><span class="bold">Origine :</span> Grande-Bretagne</p>
+                <p><span class="bold">Espérance de vie :</span> 12 à 15 ans</p>
             
+ 
+
             </div>
             
             <div id="space" class="container">
-                <img class="logoAside" src="..." alt="50x50">
-                <img class="logoAside" src="..." alt="50x50">
-                <img class="logoAside" src="..." alt="50x50">
-                <img class="logoAside" src="..." alt="50x50">
+                <img class="logoAside" src="assets/img/Catmoji.jpg" alt="50x50">
+                <img class="logoAside" src="assets/img/Ymp.png" alt="50x50">
+                <img class="logoAside2" src="assets/img/logo_index.gif" alt="50x50">
+                <img class="logoAside" src="assets/img/petwork.png" alt="50x50">
                 
             </div>
         </aside>
@@ -63,7 +70,7 @@
 
     <hr class="nomarging">
     <div id="button">
-        <img src="assets/img/button_ancre-removebg-preview.png" alt="button up">
+        <a href="#ancre"><img src="assets/img/button_ancre-removebg-preview.png" alt="button up"></a>
     </div>
     
     <footer class="container">
@@ -71,33 +78,33 @@
         <div>
             <h3>NEWSLETTER</h3>
             <form action="">
-                <div id="marginForm">
+                <p >
                     <input type="text" placeholder="Nom"> 
-                </div>
-                <div>
+                </p>
+                <p>
                     <input type="text" placeholder="E-mail">
                     <button>S'abonner</button>
-                </div>
+                </p>
             </form>
         </div>
-        <div class="container spaceFooter">
-            <div>
+
+            <div id="flex">
                 <h3>PHOTOS</h3>
                 <div class="container">
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/corgi-eau.jpg" alt="50x50"></div>
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/corgi_cours.jpg" alt="50x50"></div>
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/corgi_chiot.jpg" alt="50x50"></div>
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/corrgi_royale.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage" src="assets/img/corgi-eau.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage" src="assets/img/corgi_cours.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage" src="assets/img/corgi_chiot.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage" src="assets/img/corrgi_royale.jpg" alt="50x50"></div>
                 </div>
             </div>
             <div>
                 <h3>PARTENAIRES</h3> 
                 <div class="container">
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/Collie-close.jpg" alt="50x50"></div>
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/Bouvier_bernois.jpg" alt="50x50"></div>
-                        <div><img class="marginImage" style="height:100px; width:100px;" src="assets/img/Berger_australien.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage"  src="assets/img/Collie-close.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage"  src="assets/img/Bouvier_bernois.jpg" alt="50x50"></div>
+                        <div><img class="sizeImage"  src="assets/img/Berger_australien.jpg" alt="50x50"></div>
                 </div>
-            </div>
+
         </div>
     </footer>
 
