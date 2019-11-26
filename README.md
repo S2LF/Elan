@@ -1,6 +1,5 @@
 # Elan
 
-
 MyFrama: https://my.framasoft.org/u/s2lf/
 
 FramaCalc - Stage:
@@ -10,6 +9,10 @@ FramaPads - Texte:
 https://mypads.framapad.org/mypads/?/mypads/group/fourre-tout-xyh0t7mv/view
 
 Slack: https://elandevweb.slack.com/
+
+Outils:
+
+Tableau périodique HTML5: https://websitesetup.org/html5-periodical-table/
 
 Gérer les accents en HTML: https://www.scriptol.fr/creation-site-web/accents-html.php
 
