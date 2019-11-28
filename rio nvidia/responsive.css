@@ -1,0 +1,58 @@
+@media screen and (max-width: 1000px){
+
+   header.flex {
+        flex-direction: column;
+        text-align: center;
+
+    }
+    header nav, header a{
+        text-align: center;
+        margin: auto;
+    }
+    header nav {
+        padding: 1em 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    header nav {  
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    margin: auto; */
+    }
+
+    i.fa-caret-square-down {
+        display: initial;
+    }
+
+
+
+
+
+    main aside {
+        margin: 0;
+    }
+    main{
+        flex-direction: column;
+    }
+    footer.flex{
+        display: block;
+        text-align: center;
+    }
+    footer form input{
+        display: block;
+        margin: 0 auto;
+    }
+    section div {
+        justify-content: center;
+    }
+
+    header nav a:hover{
+        margin: 0 2em -0.8em;
+        padding-bottom: 0.8em;
+        border-bottom: 0;
+        color: var(--main-color-lighter);
+    }
+}

@@ -1,0 +1,194 @@
+:root {
+  --main-color: #0a3782;
+  --main-color-darker: #001e69;
+  --main-color-lighter:#23a2bf;
+}
+*{
+	box-sizing: border-box;
+}
+/*---------------------------GLOBAL RULES------------------------------*/
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+/*--------------------------END GLOBAL RULES---------------------------*/
+html, body{
+	width: 100%;
+	min-height: 100%;
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+#wrapper{
+	max-width: 1024px;
+	margin: auto;
+	padding: 0 1em 1em 1em;
+}
+header{
+	align-items: flex-end;
+	background-color: var(--main-color);
+	color: white;
+}
+header #logo{
+	height: 100px;
+}
+header #logo img {
+	height: 100px;
+}
+header nav{
+	flex: 1;
+	text-align: center;
+	margin-bottom: 1em;
+}
+header nav a{
+	margin: 0 2em;
+	font-weight: bold;
+}
+i.fa-caret-square-down{
+ font-size: 3em;
+ text-align: center;
+ width:100%;
+ display:none;
+}
+header nav a:hover{
+	margin: 0 2em -0.8em;
+	padding-bottom: 0.8em;
+	border-bottom: 3px solid var(--main-color-lighter);
+	color: var(--main-color-lighter);
+}
+#banner{
+	height: 15em;
+	position: relative;
+	margin: 0;
+}
+#banner img{
+	object-fit: cover;
+	/* object-position: 50% 0%; */
+	width: 100%;
+	height: 100%;
+}
+#banner figcaption{
+	width: 100%;
+	background-color: rgb(35, 61, 140, 0.9);
+	color: #fff;
+	margin: 0;
+	padding: 0.5em;
+	position: absolute;
+	bottom: 0;
+	justify-content: space-between;
+	align-items: center;
+}
+#banner figcaption a{
+	background-color: rgb(31, 162, 191);
+	padding: 0.5em;
+	border-radius: 0.5em;
+		transition: transform 0.8s;
+}
+#banner figcaption a:hover{
+	background-color: rgb(31,146,191);
+	transform: scale(1.1);
+
+}
+
+#home-article h2{
+	padding: 0 0 0 3.5em;
+	background: transparent url('./img/ldlc.png') no-repeat top left;
+	background-size: 3em 1em;
+
+	
+}
+main{
+	padding: 1em 0 0 0;
+	border-bottom: 2px solid var(--main-color);
+}
+main article{
+	flex: 2;
+	padding-bottom: 1em;
+	text-align: justify;
+}
+main aside{
+	flex: 1;
+	margin-left: 1em;
+	padding: 0 1em;
+	background-color: var(--main-color);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+#aside-body{
+	flex: 1;
+}
+aside h2, #flag{
+	text-align: center;
+}
+#flag img{
+	height: 100px;
+	background-color: white;
+	padding:5px;
+	border-radius: 7px;
+}
+#socials{
+	display: flex;
+	justify-content: space-evenly;
+}
+#socials a:hover{
+	text-shadow: 0px 0px 5px #fff;
+}
+#tribtn{
+	text-align: center;
+}
+#tribtn img{
+	height: 2em;
+	margin-top: -6px;
+}
+footer>section:not(:first-child){
+	padding-left: 1em;
+}
+footer>section:first-child{
+	flex: 1;
+}
+footer form input:not(.valid){
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}
+footer form .valid{
+	padding: 0.5em 1em;
+	background-color: var(--main-color);
+	color: #fff;
+	border: none;
+}
+footer form .valid:hover{
+	background-color: var(--main-color-darker);
+}
+#gallery a, #brands a{
+	width: 80px;
+	height: 80px;
+	margin-right: 0.5em;
+}
+#gallery a{
+	overflow: hidden;
+	border: 0px solid var(--main-color);
+	transition: border-width 0.5s;
+}
+#gallery a img, #brands a img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transition: transform 0.5s;
+}
+#gallery a img:last-child{
+	background-color: var(--main-color-darker);
+}
+#gallery a:hover{
+	border-width: 4px;
+}
+#gallery a:hover img{
+	transform: scale(1.5, 1.5);
+}
+#brands a:hover img{
+	transform: scale(1.2, 1.2);
+}
