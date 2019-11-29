@@ -98,21 +98,19 @@ $nomInput = ["Nom", "Prénom", "Ville"];
 
 formPerso($nomInput);
 
-formPerso2($nomInput);
 
 // Exo 6
 echo "<br><br> Exo 6 <br><br>";
 
-
-
 $elements = ["Monsieur !", "Madame :D", "Mademoiselle ;)"];
-$elements2 = ["Monsieur" => "checked", "Madame" => "", "Mademoiselle" => ""];
 
 Deroul($elements);
 
 
 // Exo 7
 echo "<br><br> Exo 7 <br><br>";
+
+$elements2 = ["Monsieur" => "checked", "Madame" => "", "Mademoiselle" => ""];
 
 
 genererCheckbox($elements2);
@@ -201,8 +199,38 @@ echo $v2;
 echo "<br><br>";
 
 $v1->demarrer();
+$v1->accelerer(50);
 echo "<br><br>";
 echo $v1;
+$v2->demarrer();
+$v2->stopper();
+$v2->accelerer(20);
+
+$v1->getRoule();
+$v2->getRoule();
+echo "<br><br>";
+$v2->ralentir(10);
+$v1->ralentir(10);
+echo "<br><br>";
+$v2->demarrer();
+$v2->ralentir(10);
+$v2->accelerer(5);
+$v2->ralentir(10);
+$v2->accelerer(5);
+$v2->ralentir(10);
+
+$v3 = new Voiture("BMW", "X4", 5);
+$v3->demarrer();
+
+$v3->accelerer(50);
+$v3->ralentir(50);
+$v3->stopper();
+$v3->accelerer(50);
+echo $v3;
+
+
+// Exo 14
+echo "<br><br> Exo 14 <br><br>";
 
 
 ?>
