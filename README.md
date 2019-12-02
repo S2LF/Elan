@@ -26,3 +26,7 @@ Tu n'utilisera point le comic sans:
 https://www.google.com/search?client=firefox-b-d&q=tu+n%27utiliseras+point+le+comic+sans
 
 http://yakafokon.detected.fr/
+
+Host:
+PHP: http://phptester.net
+JSFiddle: https://jsfiddle.net/
