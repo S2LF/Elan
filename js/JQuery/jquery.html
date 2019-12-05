@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery In Your Brain</title>
+    <link rel="stylesheet" href="query.css">
+</head>
+<body>
+    
+    <div id="uneDiv">une Div !</div>
+    <p>Un Paragraphe</p>
+    <button>Bouton !</button>
+    <span>Clic si t'es Cap !</span>
+
+    <div>
+        <p>Paragraphe1</p>
+        <p>Paragraphe2</p>
+        <p>Paragraphe3</p>
+    </div>
+
+    <p id="vert">Paragraphe VERT</p>
+    <p id="red">Paragraphe RED taille normal</p>
+
+    <p id="animate">Paragraphe animé !</p>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="script.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            console.log("JQuery is ready !")
+        });
+        // AKA $()
+        $(document).ready(function(){
+            console.log("JQuery with $() ready !")
+        })
+        // AKA function($)
+        jQuery(function($){
+            console.log("JQuery with function($) ready !")
+        })
+
+        // Event click()
+        $("#uneDiv").click(function(){
+
+        })
+
+        // Déclenchement virtuel avec "Trigger"
+        $('p').click(function(){
+            console.log('Cliqué !');
+        });
+        
+        $('p').trigger('click'); // déclenche l'action au chargement du script
+
+
+        // Annuler le comporrtement par défaut d'un élément
+        $('a').click(function(e){
+            e.preventDefault(); // annule l'action du lien
+        });
+        
+        // Ecouter un évènement avec ON()
+        // ici on écoute le click sur le button
+        $('button').on('click', function(){
+            console.log('Ce code fonctionne !');
+        });
+
+        // ici on écoute le click & le dblclicck sur le button
+        $('button').on('click dblclick', function(){ // on écoute le clic et le double-clic !
+            console.log('Ce code fonctionne aussi !');
+        });
+        
+        // Ou passer par un objet:
+        $('span').on({
+            click : function(){
+                console.log('Vous avez cliqué !');
+            },
+            mouseup : function(){
+                console.log('Vous avez relâché le clic !');
+            }
+        });
+        // Délégation d'évènement
+            // On applique l'évènement sur la div mais s'applique sur les p ?!
+        $('div').on('click', 'p', function(){
+            console.log('Les paragraphes créés peuvent être cliqués !');
+        });
+
+        // Manipuler du CSS avec jQuery
+            // Récupérer une valeur, ici la couleur en RGB !
+        console.log($('#vert').css('color')); // ma méthode ira chercher la valeur de la propriété "color" et retournera "green"
+
+            // Modifier une valeur CSS
+            $('#vert').css('color', 'red'); // ma méthode modifiera la propriété "color" et la définira à "red"
+                // Peut prendre plusieurs arguments
+            $('#red').css({
+                color:'green',
+                'font-size':'2em',
+
+            })
+
+        // Animate
+            $('#animate').animate({
+                width : '150px',
+                fontSize : '35px', // ne pas oublier la syntaxe de l'identifiant !
+                marginTop : '50px'
+            }, 1500);
+            
+            
+    </script>
+</body>
+</html>

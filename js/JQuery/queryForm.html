@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form_style.css">
+    <title>Query Formulaire</title>
+</head>
+<body>
+
+    <div id="erreur">
+            <p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
+    </div>
+
+
+    <form action="">
+        <label for="pseudo">Pseudo:</label>
+        <input type="text" name="pseudo" id="pseudo" class="champ" required>
+        <br><br>
+
+        <label for="password">Mot De Passe:</label>
+        <input type="password" name="password" id="password" class="champ" required>
+        <br><br>
+
+        <label for="password">Confirmez Mot De Passe:</label>
+        <input type="password" name="passwordConfirm" id="confirm" class="champ" required>
+        <br><br>
+
+        <label for="mail">Votre e-mail:</label>
+        <input type="text" name="mail" id="mail" class="champ" required>
+        <br><br>
+
+        <input type="submit" id="submit">
+        <input type="reset" id="reset">
+    </form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+<script>
+
+$(document).ready(function(){
+
+
+    var $pseudo = $('#pseudo'),
+    $mdp = $('#password'),
+    $confirmation = $('#confirm'),
+    $mail = $('#mail'),
+    $envoi = $('#submit'),
+    $reset = $('#reset'),
+    $erreur = $('#erreur'),
+    $champ = $('.champ');
+    
+
+    $champ.keyup(function(){
+
+        if($(this).val().length < 5) {
+            $(this).css({
+                borderColor: 'red',
+                color:'red'
+            })
+        } else {
+            $(this).css({
+                borderColor: 'green',
+                color:'green'
+            });
+        }
+    });
+
+    $confirmation.keyup(function(){
+        if($(this).val() != $mdp.val()){
+            $(this).css({
+                borderColor: 'red',
+                color:'red'
+            }) 
+        } else {
+            $(this).css({
+                borderColor: 'green',
+                color:'green'
+            })
+        }
+    });
+
+    function verifier(champ){
+        if(champ.val() == ""){
+            $erreur.css( 'display', 'block');
+            champ.css({
+                borderColor: 'red',
+                color:'red'
+            });
+        } 
+    }
+
+    $envoi.click(function(e){
+        e.preventDefault();
+
+        verifier($pseudo);
+        verifier($mdp);
+        verifier($confirmation);
+        verifier($mail);
+    
+    })
+
+    $reset.click(function(){
+        $champ.css({
+            borderColor: '#ccc',
+            color: '#555'
+        });
+        $erreur.css('display', 'none');
+        });
+
+
+});
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
