@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My title</title>
+		<style>
+			#numeros{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.boite{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 2em;
+				text-align: center;
+				border: 1px solid #000;
+			}
+			.good{
+				background-color: green;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="numeros"></div>
+		<p id="msg"></p>
+	
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.min.js"
+		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  crossorigin="anonymous"></script>
+		<script>
+			const nb = 10
+			let nbActuel = 1
+			let boites = []
+			
+			$(document).ready(function(){
+				for(let i = 1; i <= nb; i++){
+					boites.push(
+						"<div data-nb='"+i+"' class='boite'>"+i+"</div>"
+					)
+				}
+				
+				boites.sort(function() {
+					return .5 - Math.random();
+				});
+				
+				$("#numeros").append(boites)
+			
+				$(".boite").click(function(){
+					
+					if($(this).text() == nbActuel){
+						if(nbActuel == nb){
+							$(".boite").unbind("click")
+							$("#msg").html(
+								"BRAVO ! <a href=''>Rejouer</a>"
+							)
+						}
+						nbActuel++
+						$(this).addClass("good")
+					}
+					else{
+						$(".boite[data-nb="+nbActuel+"]")
+							.fadeTo("normal",0.2)
+							.fadeTo("normal",1, function(){
+								$(".boite").removeClass("good")
+								nbActuel = 1
+							}
+						)
+						
+					}
+					
+				})
+			})
+			
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
