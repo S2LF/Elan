@@ -30,3 +30,5 @@ http://yakafokon.detected.fr/
 Host:
 PHP: http://phptester.net
 JSFiddle: https://jsfiddle.net/
+
+Alternative WAMPP: LARAGON !! ++
