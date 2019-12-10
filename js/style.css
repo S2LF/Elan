@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box ;
+}
+
+#border{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin:auto;
+}
+
+.case {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    align-self: center;
+    font-size: xx-large;
+}
+
+#affich {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
