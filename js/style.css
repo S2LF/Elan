@@ -15,8 +15,8 @@
     width: 200px;
     height: 200px;
     text-align: center;
-    align-self: center;
-    font-size: xx-large;
+    margin:auto;
+    font-size: 170px;
 }
 
 #affich {

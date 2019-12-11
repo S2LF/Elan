@@ -12,17 +12,16 @@
     
     <div id="affich"></div>
     <div id="border">
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
-        <div class="case"></div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
+        <div class="case"> </div>
     </div>
-
 
 
 
@@ -34,39 +33,190 @@
 
 <script>
 
-    tour = 'X'
+    let tour = 'X'
 
-    $("#affich").text(function(){
+    console.log($(".case").indexOf)
 
-        if (tour == 'X'){
-            $(this).text("C'est à "+tour+" de jouer")
-        } else {
-            $(this).text("C'est à "+tour+" de jouer")
+    $('#affich').text("C'est à "+tour+" de jouer")
+
+    function handleClick(laCase){
+        
+        laCase.text(tour)
+        if(verifEncore()){
+            if($(".case").indexOf(" ") == -1){
+            matchNul()
+            }
+            victoire()
+        }else{
+            if (tour == 'X') {
+                tour = 'O'
+            } else {
+                tour = 'X'
+            }
+            $('#affich').text("C'est à "+tour+" de jouer")
+
+            laCase.off('click')
+        }
+    
+    }
+
+    $(".case").on("click", function(){
+        handleClick($(this))
+        
+    })
+    
+    function victoire(){
+        $('#affich').text("C'est gagné pour "+tour)
+       
+        $('.case').off('click')
+
+        resetMorpion()
+    }
+
+
+    function resetMorpion(){
+        $(".case").each(function(){
+            $(this).text(" ")
+        })
+        $(".case").on("click", function(){
+            handleClick($(this))
+            
+        })
+    }
+
+    function matchNul(){
+            $('#affich').text("Match nul")
+            $('#affich').on('click', function(){
+                resetMorpion()})
+
+            $('.case').off('click')
+    }
+
+   
+function verifEncore(){
+        let contenu = ""
+ 
+        $(".case").each(function(){
+            contenu += $(this).text() 
+        })
+
+        let patterns = [ [0,1,2], [3,4,5], [6,7,8],
+                        [0,3,6], [1,4,7], [2,5,8],
+                        [0,4,8], [2,4,6] ]
+
+
+        let verif = false
+        patterns.forEach(function(pat){
+            let trio = contenu.charAt(pat[0])+contenu.charAt(pat[1])+contenu.charAt(pat[2])
+            console.log(trio)
+            if(trio == tour.repeat(3)){
+                verif = true
+            }
+            
+        })
+        
+        return verif
+}
+
+
+
+ 
+
+
+
+    function verif(){
+
+    // Ligne 1
+    //  for(i=0; i<3; i++){
+        if($(".case")[0].innerText != "" 
+            && $(".case")[0].innerText == $(".case")[1].innerText 
+            && $(".case")[0].innerText == $(".case")[2].innerText) 
+        {
+            return true
+        }
+    // }  
+
+    // Ligne 2
+        if($(".case")[3].innerText != "" 
+            && $(".case")[3].innerText == $(".case")[4].innerText 
+            && $(".case")[3].innerText == $(".case")[5].innerText) 
+        {
+            return true
+        }
+
+    // Ligne 3
+        if($(".case")[6].innerText != "" 
+            && $(".case")[6].innerText == $(".case")[7].innerText 
+            && $(".case")[6].innerText == $(".case")[8].innerText) 
+        {
+            return true
         }
 
 
-    })
 
 
 
-    $(".case").click(function(){
+    // Col 1
 
-        $(this).text(tour)
+        if($(".case")[0].innerText != "" 
+            && $(".case")[0].innerText == $(".case")[3].innerText 
+            && $(".case")[0].innerText == $(".case")[6].innerText)
+        {
+            return true
+        }
+    
+    // Col 2
 
-        if (tour == 'X') {
-            tour = 'O'
-        } else {
-            tour = 'X'
+        if($(".case")[1].innerText != "" 
+            && $(".case")[1].innerText == $(".case")[4].innerText 
+            && $(".case")[1].innerText == $(".case")[7].innerText)
+        {
+            return true
+        }
+
+    // Col 3
+
+        if($(".case")[2].innerText != "" 
+            && $(".case")[2].innerText == $(".case")[5].innerText 
+            && $(".case")[2].innerText == $(".case")[8].innerText)
+        {
+            return true
         }
 
 
 
+        
+    // Diag 1
 
-    })
+        if($(".case")[0].innerText != "" 
+            && $(".case")[0].innerText == $(".case")[4].innerText 
+            && $(".case")[0].innerText == $(".case")[8].innerText)
+        {
+            return true
+        }
+
+    // Diag 2
+
+        if($(".case")[2].innerText != "" 
+            && $(".case")[2].innerText == $(".case")[4].innerText 
+            && $(".case")[2].innerText == $(".case")[6].innerText)
+        {
+            return true
+        }
+    
+
+
+    }
+
+
+
+
+
+
+
+
 
 </script>
-
-
 
 
 </body>
