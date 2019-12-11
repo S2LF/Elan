@@ -12,6 +12,8 @@ Slack: https://elandevweb.slack.com/
 
 Outils:
 
+Draw.io : Maquettage interface Web
+
 REAC Afpa: https://www.banque.di.afpa.fr/EspaceEmployeursCandidatsActeurs/EGPResultat.aspx?ct=01280m03&type=t
 
 Tableau périodique HTML5: https://websitesetup.org/html5-periodical-table/
