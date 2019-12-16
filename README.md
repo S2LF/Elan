@@ -20,6 +20,8 @@ Tableau périodique HTML5: https://websitesetup.org/html5-periodical-table/
 
 Gérer les accents en HTML: https://www.scriptol.fr/creation-site-web/accents-html.php
 
+CSS Gradient Generator: https://mycolor.space/
+
 Stats utilisation navigateurs: https://www.w3counter.com/globalstats.php
 
 Emmet sheet cheat: https://docs.emmet.io/cheat-sheet/
