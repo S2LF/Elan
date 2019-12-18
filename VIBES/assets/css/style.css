@@ -1,5 +1,5 @@
 :root {
-    --main-color: #0a3782;
+    --main-color: #eb7561;
     --main-color-darker: #001e69;
     --main-color-lighter:#23a2bf;
   }
@@ -18,27 +18,42 @@
 	padding: 0 1em 1em 1em;
 }
 .article-wrapper{
-    max-width: 800px;
-    margin: auto;
+    padding: 1em 4em;
 }
-
 
 
 #section-wrapper{
     background-color: white;
 }
 
+/* Impacts toute les éléments */
 body{
+    font-size: 16px;
     background-image: linear-gradient(to bottom, #dca54b, #e3994d, #e88d51, #eb8158, #eb7561, #eb7561, #eb7561, #eb7561, #eb8158, #e88d51, #e3994d, #dca54b);
 }
-
+span {
+    font-weight: bold;
+}
+.buttons{
+    border: 2px solid var(--main-color);
+    padding: 1em;
+}
+hr {
+    width: 2em;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.center {
+    text-align: center;
+}
+/* Footer  */
 
 #topBan {
     text-align: center; 
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../img/index.jpg') no-repeat;
-    height: 555px;
-    background-size: contain;
+    /* height: 555px; */
+    background-size: cover;
     padding: 8em;
     color: white;
 }
@@ -60,29 +75,117 @@ header>nav {
 }
 
 #infos{
-    	display: flex;
+    display: flex;
 	flex-wrap: wrap;
 }
 
-#infos article{
-    flex:0.5;
-}
-#infos div{
-    text-align: center;
-    flex:1
-}
-#infos div:last-child{
-    flex:0.5;
+section#infos>* {
+  
+    flex:1;
+} 
+section#infos>div:first-of-type{
+    margin: 0 1em;
 }
 
-/* 8 images */
-
-.heightLine{
-    line-height: 0;
+details {
+    border: 1px solid gray;
+    margin: 1em;
 }
+
+/* Gallery 8 images */
+
 .resize {
-
-    width: 248px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
+    vertical-align: top;
+}
+
+.boxsize {
+    width: 25%
+}
+.media {
+    width: 100%;
+    margin: 1em;
+}
+.loadMore{
+    border: 1px solid  var(--main-color);
+    color: var(--main-color);
+    padding: 1em;
+    text-align: right;
+}
+
+/* BlockQuotes */
+
+.avatarSizing {
+    width: 70px;
+    height: 70px;
+        margin-right: 10px;
+        float: left;
+}
+
+blockquote {
+    display: flex;
+    margin: 0;
+    padding: 2em 0;
+    border-bottom: 2px solid grey;
+}
+section> blockquote:last-of-type {
+    border-bottom: none;
+}
+blockquote p{
+    font-style: italic;
+}
+
+section.horizon{
+    background-image: url('../img/neige.gif');
+    background-size: 100%;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+section.horizon p{
+    padding: 2em;
+}
+h2 {
+    text-align: center;
+}
+
+
+/* Form Section */
+
+form.flex > div {
+    margin: 0 auto;
+}
+
+
+
+/* Footer */
+
+footer.article-wrapper {
+    background-color: black;
+    color: white;
+}
+
+footer hr{
+    margin: 0;
+}
+
+footer article {
+    flex: 1;
+}
+footer article.articleCentre{
+    margin: auto 3em;
+}
+footer div {
+    flex:1;
+}
+footer input.buttons {
+    margin: 1em 0;
+    padding: 0.25em;
+    background-color: black;
+    color: white;
+}
+footer h5 {
+    margin-bottom: 1em;
 }
