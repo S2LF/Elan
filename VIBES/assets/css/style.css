@@ -1,7 +1,7 @@
 :root {
-    --main-color: #eb7561;
-    --main-color-darker: #001e69;
-    --main-color-lighter:#23a2bf;
+    --main-color: #e85682;
+    --main-color-darker: #e3855f;
+    --main-color-lighter:#ffffff;
   }
 
 *{
@@ -23,13 +23,16 @@
 
 
 #section-wrapper{
-    background-color: white;
+    background-color: var(--main-color-lighter);
 }
 
 /* Impacts toute les éléments */
+html{
+    background: url(../img/ciellune.jpg);
+}
 body{
     font-size: 16px;
-    background-image: linear-gradient(to bottom, #dca54b, #e3994d, #e88d51, #eb8158, #eb7561, #eb7561, #eb7561, #eb7561, #eb8158, #e88d51, #e3994d, #dca54b);
+    background: linear-gradient(to bottom, rgba(227, 133, 95, 0.5), #e77c62, #e97367, #eb6a6d, #eb6175, #eb6175, #eb6175, #eb6175, #eb6a6d, #e97367, #e77c62, #e3855f) repeat;
 }
 span {
     font-weight: bold;
@@ -52,10 +55,9 @@ hr {
     text-align: center; 
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../img/index.jpg') no-repeat;
-    /* height: 555px; */
     background-size: cover;
     padding: 8em;
-    color: white;
+    color: var(--main-color-lighter);
 }
 a{
 	text-decoration: none;
@@ -80,17 +82,41 @@ header>nav {
 }
 
 section#infos>* {
-  
     flex:1;
 } 
-section#infos>div:first-of-type{
-    margin: 0 1em;
+section#infos:not(i){
+    font-size: 0.8em;
 }
+section#infos>div>dl>dt{
+    font-weight: bold;
+    margin: 0;
+
+}
+
+section#infos>div>dl>dt>i{
+    float: left;
+    padding-right: 1rem;
+    color: var(--main-color);
+}
+
 
 details {
     border: 1px solid gray;
-    margin: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
 }
+details>summary{
+    list-style: none;
+}
+details>summary::-webkit-details-marker { /* Pour Chrome */
+    display: none;
+}
+
+details[open] .fa-plus:before{
+    content: "\f068";
+}
+
+
 
 /* Gallery 8 images */
 
@@ -107,12 +133,24 @@ details {
 .media {
     width: 100%;
     margin: 1em;
+    display: flex;
 }
+.media>p{
+    width: 50%;
+}
+.media>:first-child>a{
+    padding: 0.5em;
+}
+.media>:last-child{
+    text-align: right;
+}
+
 .loadMore{
     border: 1px solid  var(--main-color);
     color: var(--main-color);
     padding: 1em;
     text-align: right;
+    font-weight: bold;
 }
 
 /* BlockQuotes */
@@ -140,7 +178,7 @@ blockquote p{
 section.horizon{
     background-image: url('../img/neige.gif');
     background-size: 100%;
-    color: white;
+    color: var(--main-color-lighter);
     text-align: center;
     padding: 2em;
 }
@@ -154,17 +192,31 @@ h2 {
 
 /* Form Section */
 
-form.flex > div {
-    margin: 0 auto;
+form.flex>div {
+ flex:1;
+ padding-right: 1em;
+}
+form.flex>div>p>input, form.flex>div>p>textarea {
+    width: 100%;
+    background-color:#EEEEEE;
+    
+}
+form.flex>div>p>label>span {
+    color:var(--main-color);
 }
 
+form.flex>div>input{
+    background-color: var(--main-color);
+    color: var(--main-color-lighter);
+    padding: 0.5em;
+}
 
 
 /* Footer */
 
 footer.article-wrapper {
     background-color: black;
-    color: white;
+    color: var(--main-color-lighter);
 }
 
 footer hr{
@@ -184,8 +236,20 @@ footer input.buttons {
     margin: 1em 0;
     padding: 0.25em;
     background-color: black;
-    color: white;
+    color: var(--main-color-lighter);
 }
 footer h5 {
     margin-bottom: 1em;
+}
+
+div.end{
+    display: flex;
+}
+div.end>p{
+    width:50%;
+
+    color: var(--main-color-lighter);
+}
+div.end>:last-child{
+    text-align: right;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
     <title>VIBES</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -49,39 +50,40 @@
                     <h3>What You Get ?</h3>
 
                     <dl>
-                        <i></i> <!-- float left & pr1rem-->
-                        <dt>COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpresss Theme</dd>
-                    </dl>
-                    <dl>
-                        <i></i> <!-- float left & pr1rem-->
-                        <dt>COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpresss Theme</dd>
-                    </dl>
-                    <dl>
-                        <i></i> <!-- float left & pr1rem-->
-                        <dt>COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpresss Theme</dd>
+                        
+                        <dt><i class="fab fa-accessible-icon fa-2x"></i> <!-- float left & pr1rem-->
+                            COLORFUL & COMPACT</dt> <!-- margin: 0-->
+                        <dd>Portfolio Wordpress Theme</dd>
+                    
+                        
+                        <dt><i class="fas fa-american-sign-language-interpreting fa-2x"></i> <!-- float left & pr1rem-->
+                            COLORFUL & COMPACT</dt> <!-- margin: 0-->
+                        <dd>Portfolio Wordpress Theme</dd>
+
+                        
+                        <dt><i class="fab fa-angellist fa-2x"></i> <!-- float left & pr1rem-->
+                            COLORFUL & COMPACT</dt> <!-- margin: 0-->
+                        <dd>Portfolio Wordpress Theme</dd>
                     </dl>
                 </div>
                 <div>
                 <details>
                     <summary>
-                        <i></i>
+                        <i class="fas fa-plus"></i>
                         NULLA CONSEQUAT MASSA
                     </summary>
                     <p>Révélés</p>
                 </details>
                 <details>
                     <summary>
-                        <i></i>
+                        <i class="fas fa-plus"></i>
                         VIVAMUS ELEMENTUM SEMPER
                     </summary>
                     <p>Révélés</p>
                 </details>
                 <details>
                     <summary>
-                        <i></i>
+                        <i class="fas fa-plus"></i>
                         ETIAM ULTRICIES NISI VEL
                     </summary>
                     <p>Révélés</p>
@@ -120,13 +122,15 @@
 
         
                 <div  class=" media article-wrapper" >
-                    <a>ALL</a>
-                    <a>AUDIO</a>
-                    <a>IMAGE</a>
-                    <a>VIDEO</a>
-        
-                    <a class="loadMore" href="">L'EAU DE MORT</a>
-        
+                    <p>
+                        <a>ALL</a>
+                        <a>AUDIO</a>
+                        <a>IMAGE</a>
+                        <a>VIDEO</a>   
+                    </p>
+                    <p>
+                        <a class="loadMore" href="">L'EAU DE MORT</a>
+                    </p>
                 </div>
             </section>
             
@@ -172,13 +176,13 @@
                 <form action="" class="flex">
                     <div>
                         <p>
-                            <label for="">YOUR NAME</label><br>
-                            <input type="text">    
+                            <label for="">YOUR NAME <span>*</span></label><br>
+                            <input type="text" required>    
                         </p>
 
                         <p>   
-                            <label for="">YOUR EMAIL</label><br>
-                            <input type="text"> 
+                            <label for="">YOUR EMAIL <span>*</span></label><br>
+                            <input type="text" required> 
                         </p>
                         <p>
                             <label for="">YOUR PHONE</label><br>
@@ -187,17 +191,15 @@
                     </div>
                     <div>
                         <p>
-                            <label for="">MESSAGE</label><br>
-                            <textarea name="" id="" cols="15" rows="5"></textarea>
-                        </p>
-                        <p>
                             <label for="">SUBJECT</label><br>
                             <input type="text">
                         </p>
                         <p>
-                            <input type="submit" value="SEND">     
+                            <label for="">MESSAGE <span>*</span></label><br>
+                            <textarea name="" id="" required></textarea>
                         </p>
-
+                        
+                            <input type="submit" value="SEND">     
                     </div>
 
                 </form>
@@ -242,11 +244,13 @@
 
     </div>
 
-    <div>
+    <div class="end article-wrapper">
         <p>Bite my shiny metal ass</p>
-        <a href="">Home</a>
-        <a href="">Elements</a>
-        <a href="">Documentation</a>
+        <p> 
+            <a href="">Home</a>
+            <a href="">Elements</a>
+            <a href="">Documentation</a>
+        </p>    
     </div>
 
 
