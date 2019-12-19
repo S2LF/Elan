@@ -38,3 +38,6 @@ PHP: http://phptester.net
 JSFiddle: https://jsfiddle.net/
 
 Alternative WAMPP: LARAGON !! ++
+
+
+SUPER FORM RESET: https://gist.github.com/anthonyshort/552543
