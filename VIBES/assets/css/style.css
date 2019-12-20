@@ -1,7 +1,7 @@
 :root {
     --main-color: #e85682;
     --main-color-darker: #e3855f;
-    --main-color-lighter:#ffffff;
+    --main-color-lighter:rgb(255, 255, 255);
   }
 
 *{
@@ -20,8 +20,6 @@
 .article-wrapper{
     padding: 1em 4em;
 }
-
-
 #section-wrapper{
     background-color: var(--main-color-lighter);
 }
@@ -29,10 +27,12 @@
 /* Impacts toute les éléments */
 html{
     background: url(../img/ciellune.jpg);
+    
+    scroll-behavior: smooth;
 }
 body{
     font-size: 16px;
-    background: linear-gradient(to bottom, rgba(227, 133, 95, 0.5), #e77c62, #e97367, #eb6a6d, #eb6175, #eb6175, #eb6175, #eb6175, #eb6a6d, #e97367, #e77c62, #e3855f) repeat;
+    background: linear-gradient(to bottom, rgba(227, 133, 95, 0.7), rgb(231, 124, 98), #e97367, #eb6a6d, #eb6175, #eb6175, #eb6175, #eb6175, #eb6a6d, #e97367, #e77c62, #e3855f) repeat;
 }
 span {
     font-weight: bold;
@@ -40,17 +40,63 @@ span {
 .buttons{
     border: 2px solid var(--main-color);
     padding: 1em;
+    font-weight: bold;
 }
 hr {
-    width: 2em;
-    font-weight: bold;
+    width: 5em;
+    color: var(--main-color);
+    border: 2px solid;
+}
+.become {
+    text-align: center;
+    padding-bottom: 3em;
     color: var(--main-color);
 }
-.center {
-    text-align: center;
-}
-/* Footer  */
 
+/* Header  */
+
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+header{
+    text-align: center;
+    padding:0 4em;
+}
+header>img {
+    height:100px;
+    margin: 1em 0;
+}
+header>div{
+    text-align: right;
+    flex:1;
+}
+header>div>nav {
+    flex:1;
+    align-self:center;
+    color: var(--main-color-lighter);
+}
+header>div>nav>a{
+    margin-left: 1em;
+}
+header>div>nav>a:hover{
+    padding-bottom: 1em;
+    border-bottom: 3px solid var(--main-color-lighter);
+}
+
+#burgerNav{
+    border: 2px solid var(--main-color-lighter);
+    color: var(--main-color-lighter);
+    align-self:center;
+    margin-left: 1em;
+    padding: 0.25em;
+
+    display: none;
+}
+
+/* Section Top Banner */
 #topBan {
     text-align: center; 
     width: 100%;
@@ -59,22 +105,8 @@ hr {
     padding: 8em;
     color: var(--main-color-lighter);
 }
-a{
-	text-decoration: none;
-	color: inherit;
-}
 
-header{
-    text-align: center;
-}
-header>img {
-    height:100px;
-    margin: 1em
-}
-header>nav {
-    flex:1;
-    align-self:center;
-}
+/* Section Infos */
 
 #infos{
     display: flex;
@@ -118,7 +150,7 @@ details[open] .fa-plus:before{
 
 
 
-/* Gallery 8 images */
+/* Section Gallery 8 images */
 
 .resize {
     width: 100%;
@@ -126,9 +158,26 @@ details[open] .fa-plus:before{
     object-fit: cover;
     vertical-align: top;
 }
-
 .boxsize {
-    width: 25%
+    width: 25%;
+    position: relative;
+    transition: opacity ;
+}
+.boxsize i{
+    width: 100%;
+    line-height: 200px;
+    text-align: center;
+    left: 0;
+    position: absolute;
+    align-self: auto;
+    margin: auto;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: opacity 1s;
+}
+.boxsize i:hover{
+    opacity: 1;
 }
 .media {
     width: 100%;
@@ -153,7 +202,22 @@ details[open] .fa-plus:before{
     font-weight: bold;
 }
 
-/* BlockQuotes */
+.img-animee{
+    animation-name: anime;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anime {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* Section BlockQuotes */
 
 .avatarSizing {
     width: 70px;
@@ -193,9 +257,15 @@ h2 {
 /* Form Section */
 
 form.flex>div {
- flex:1;
- padding-right: 1em;
+    flex:1;
 }
+form.flex>div:first-child{
+    padding-right: 0.5em;
+}
+form.flex>div:last-child{
+    padding-left: 0.5em;
+}
+
 form.flex>div>p>input, form.flex>div>p>textarea {
     width: 100%;
     background-color:#EEEEEE;
@@ -210,7 +280,19 @@ form.flex>div>input{
     color: var(--main-color-lighter);
     padding: 0.5em;
 }
+form.flex>div>p>input {
+    height:2em;
+    border: transparent;
+    padding: 0;
+    margin-top: 0.5em;
+}
+textarea{
+    height: 107px;
+    resize: vertical;
+    border: transparent;
+    margin-top: 0.5em;  
 
+}
 
 /* Footer */
 
@@ -218,11 +300,11 @@ footer.article-wrapper {
     background-color: black;
     color: var(--main-color-lighter);
 }
-
 footer hr{
     margin: 0;
+    width: 3em;
+    border: 1px solid;
 }
-
 footer article {
     flex: 1;
 }
@@ -232,24 +314,68 @@ footer article.articleCentre{
 footer div {
     flex:1;
 }
+footer input     {
+    background-color: rgb(46, 46, 46);
+    color: var(--main-color-lighter);
+    padding: 1em;
+}
+#humanMail{
+    width: 100%;
+    border:transparent;
+}
 footer input.buttons {
     margin: 1em 0;
-    padding: 0.25em;
+    padding: 1em;
     background-color: black;
     color: var(--main-color-lighter);
+    
 }
 footer h5 {
     margin-bottom: 1em;
 }
 
+
+
+/* After Footer Div */
 div.end{
     display: flex;
+    font-size: 0.8em;
 }
 div.end>p{
     width:50%;
-
     color: var(--main-color-lighter);
 }
 div.end>:last-child{
     text-align: right;
+}
+
+/* Goutte */
+
+.goutte {
+    position: fixed;
+    top: 200px;
+    left:0;
+    background-color: black;
+    color: var(--main-color-lighter);
+    padding: 0.5em;
+}
+
+.ancre{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 5em;
+}
+#ancre-wrapper{
+    max-width:1024px ;
+    margin: auto;
+    position: relative;
+}
+.ancre a{
+    color: rgb(46, 46, 46);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 1em;
+    margin-right: 1em;
 }
