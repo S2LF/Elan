@@ -39,5 +39,6 @@ JSFiddle: https://jsfiddle.net/
 
 Alternative WAMPP: LARAGON !! ++
 
-
-SUPER FORM RESET: https://gist.github.com/anthonyshort/552543
+JS:
+https://greensock.com/
+https://animejs.com/
