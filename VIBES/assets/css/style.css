@@ -36,7 +36,7 @@ body{
 }
 span {
     font-weight: bold;
-}
+}   
 .buttons{
     border: 2px solid var(--main-color);
     padding: 1em;
@@ -78,10 +78,10 @@ header>div>nav {
     align-self:center;
     color: var(--main-color-lighter);
 }
-header>div>nav>a{
+nav>a{
     margin-left: 1em;
 }
-header>div>nav>a:hover{
+nav>a:hover{
     padding-bottom: 1em;
     border-bottom: 3px solid var(--main-color-lighter);
 }
@@ -357,9 +357,34 @@ div.end>:last-child{
     left:0;
     background-color: black;
     color: var(--main-color-lighter);
+}
+#goutteMain{
     padding: 0.5em;
 }
+.goutteCouleur{
+    background-color: black;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+ul>li>i{
+    margin: 5px 0;
+}
+.display{
+    display: none;
+}
 
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.purple{
+    color:purple; 
+}
+
+
+/* Ancre */
 .ancre{
     position: fixed;
     left: 0;
@@ -378,4 +403,47 @@ div.end>:last-child{
     right: 0;
     padding: 0 1em;
     margin-right: 1em;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    #burgerNav{
+        display:initial;
+    }
+    header>div{
+        justify-content: flex-end;
+    }
+    .mobileDisplay{
+        display:none;
+    }
+    .menu-mobile{
+        display: flex;
+        flex-direction:column ;
+    }
+    nav>a{
+        transition: 1s;
+    }
+    nav>a:hover{
+        padding-bottom: 0;
+        border-bottom: 0px;
+    /*
+        border-right:3px solid var(--main-color);
+        padding-right:15px;*/
+    } 
+
+    .navAnimee{
+        animation-name: navAnime;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes navAnime {
+        from {
+            transform: scale(0);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
 }
