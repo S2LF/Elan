@@ -12,6 +12,8 @@ Slack: https://elandevweb.slack.com/
 
 Outils:
 
+SQL SH: https://sql.sh/
+
 Draw.io : Maquettage interface Web https://www.draw.io/
 
 REAC Afpa: https://www.banque.di.afpa.fr/EspaceEmployeursCandidatsActeurs/EGPResultat.aspx?ct=01280m03&type=t
