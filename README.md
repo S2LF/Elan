@@ -44,3 +44,15 @@ Alternative WAMPP: LARAGON !! ++
 JS:
 https://greensock.com/
 https://animejs.com/
+
+
+Inspiration WebDesign:
+
+https://www.frenchdesignindex.com/
+https://www.behance.net/search
+https://www.awwwards.com/
+https://www.webdesign-inspiration.com/fr/
+https://www.designspiration.com/
+https://www.templatemonster.com/fr/
+
+https://www.yanlinma.com/flat-ui-and-a-half/
