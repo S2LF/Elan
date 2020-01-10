@@ -10,6 +10,8 @@ https://mypads.framapad.org/mypads/?/mypads/group/fourre-tout-xyh0t7mv/view
 
 Slack: https://elandevweb.slack.com/
 
+WordPress Elan: http://wordpress.elannet.info/dl6/sylvainALLAIN/
+
 Outils:
 
 SQL SH: https://sql.sh/
@@ -65,3 +67,4 @@ https://developers.google.com/speed/pagespeed/insights/
 
 PubGoogle
 https://www.google.com/intl/fr_fr/adsense/start/
+
