@@ -16,7 +16,8 @@ $("#filters a").on("click", function(event){
 
 
 // Gestion du Details
-$("details").on('click', function(){
+$("summary").on('click', function(e){
+    e.stopPropagation();
         $("details").removeAttr("open")
         $(this).attr("open")
 })

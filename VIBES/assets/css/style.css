@@ -232,6 +232,13 @@ blockquote {
     padding: 2em 0;
     border-bottom: 2px solid grey;
 }
+#center_quote{
+    text-align: right;
+}
+#center_quote img{
+    margin-right: 0;
+    margin-left: 10px;
+}
 section> blockquote:last-of-type {
     border-bottom: none;
 }
