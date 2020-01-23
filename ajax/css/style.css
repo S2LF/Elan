@@ -1,0 +1,77 @@
+#shop{
+    display: flex;
+}
+#produits{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+#produits article{
+    flex:1;
+}
+#panier{
+    border: 1px solid #888;
+    min-width: 300px;
+}
+#panier h2{
+    text-align: center;
+}
+
+#message{
+    display: none;
+    position: fixed;
+    width: 100%;
+    background: #42f978;
+    top: 0;
+}
+
+#loader{
+    display: none;
+    position: absolute;
+    font-size: 4em;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    
+}
+td{
+    padding: 10px;
+}
+i{
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+
+.bcgGrey{
+    background-color: black;
+    color: white;
+}
+.bcgGrey th {
+    padding: 1em;
+}
+th[colspan], td[colspan]{
+    background-color: white;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#vide{
+    border: 1px solid black;
+    padding: 0.5em;
+}
+a{
+    color: inherit;
+    text-decoration: unset;
+}
