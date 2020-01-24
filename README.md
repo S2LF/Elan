@@ -12,6 +12,7 @@ Slack: https://elandevweb.slack.com/
 
 WordPress Elan: http://wordpress.elannet.info/dl6/sylvainALLAIN/
 
+Magento : http://top10cms.com/magento/
 
 Outils:
 
