@@ -71,6 +71,9 @@ Framework CSS:
 PageSpeed
 https://developers.google.com/speed/pagespeed/insights/
 
+Recherche mot clé:
+- https://answerthepublic.com
+
 PubGoogle
 https://www.google.com/intl/fr_fr/adsense/start/
 
