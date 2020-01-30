@@ -21,14 +21,15 @@
         <div>
             <p> Par <?= $message['username'] ?> le <?= date_format(new DateTime ($message['creation_date']), "d/m/Y à H:i") ?></p>
         </div>    
-            <form action="index.php?ctrl=Forum&action=deleteMessage&id=<?= $topic['topic']['id_topic']?>" method="post">
+            <!-- <form action="index.php?ctrl=Forum&action=deleteMessage&id=<?= $topic['topic']['id_topic']?>" method="post">
                 <input type="hidden" name="id_message" id="id_message" value="<?= $message['id_message']?>" >
                 <input type="submit" value="X">
-            </form>
+            </form> -->
+            <a href="index.php?ctrl=Forum&action=deleteMessage&id=<?= $topic['topic']['id_topic']?>&idMess=<?= $message['id_message']?>"><i>X</i></a>
 
-
+             <!-- Update Message -->
             <form action="index.php?ctrl=Forum&action=updateMessage&id=<?= $topic['topic']['id_topic']?>" method="POST">
-                <textarea name="message" id="new_message" cols="10" rows="5" placeholder="Message à modifier"></textarea>
+                <textarea name="new_text" id="new_text" cols="20" rows="3"><?= $message['text']?></textarea>
                 <input type="hidden" name="id_message" id="id_message" value="<?= $message['id_message']?>" >
                 <input type="submit" value="UPDATE !">
             </form>
@@ -42,7 +43,7 @@
 
 
     <form action="index.php?ctrl=Forum&action=createMessage&id=<?= $topic['topic']['id_topic']?>" method="POST">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="votre message"></textarea>
+        <textarea name="message" id="message" cols="20" rows="3" placeholder="votre message"></textarea>
         <input type="submit" value="CREATE !">
     </form>
 

@@ -33,5 +33,20 @@ class UserModel extends Model {
     }
 
 
+    public function addUser($username, $password){
+
+        $sql ="INSERT INTO user(username, date_inscription, password)
+        VALUES ('$username', NOW(), '$password')";
+
+        $stmt = self::$connexion->prepare($sql);
+        $stmt->execute();
+
+
+    }
+
+
+
+
+
 }
 

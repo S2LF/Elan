@@ -29,8 +29,6 @@ class MessageModel extends Model {
 
         $stmt = self::$connexion->prepare($sql);
         $stmt->execute();
-        // $affectedLines = $message->execute(array($text, $id_user, $id_topic));
-        
     }
 
     public function deleteMessage($id){
