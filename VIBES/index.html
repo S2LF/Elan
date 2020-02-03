@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
     <title>FUTURA'VIBES</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
     
@@ -17,7 +18,8 @@
     <header class="flex">
         <img src="assets/img/Futurama_Planet_Express.svg" alt="">
         <div class="flex">
-            <nav class="mobileDisplay navAnimee">
+            <i id="burgerNav"class="fas fa-hamburger fa-2x"></i>
+            <nav class="">
                 <a href="">HOME</a>
                 <a href="">ABOUT</a>
                 <a href="">PORTFOLIO</a>
@@ -25,16 +27,17 @@
                 <a href="">CONTACT</a>
                 <a href="">PAGES</a>
             </nav>
-            <i id="burgerNav"class="fas fa-hamburger fa-2x"></i>
+            
         </div>
     </header>
 
     <div class="goutte"><div id="goutteMain"><i class="fas fa-tint"></div></i>
 
         <ul class="goutteCouleur display">
-            <li><i id="red" class="fas fa-tint red"></i></li>
-            <li><i class="fas fa-tint blue"></i></li>
-            <li><i class="fas fa-tint purple"></i></li>
+            <li class="pink"><i class="fas fa-tint"></i></li>
+            <li class="red"><i class="fas fa-tint"></i></li>
+            <li class="blue"><i class="fas fa-tint"></i></li>
+            <li class="purple"><i class="fas fa-tint"></i></li>
         </ul>
 
     </div>
@@ -53,30 +56,30 @@
             </section>
         
             <section id="infos" class="article-wrapper">
-                <article>
-                    <h3>Why Choose Us ?</h3>
-                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet</p>
-                    <p>Nam quam nunc, blandit vel, luctus pulviniar.<br>
-                    Maecenas nec odio eet ante tincidunt tempus. Donec viate <a>spain ut libero</a></p>
+                <article  id="infoJustify">
+                    <h2>Why Choose Us ?</h2>
+                    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet.</p>
+                    <small>Nam quam nunc, blandit vel, luctus pulviniar.<br>
+                    Maecenas nec odio eet ante tincidunt tempus. Donec viate <a href id="spain">spain ut libero</a></small>
                 </article>
-                <div>
-                    <h3>What You Get ?</h3>
+                <div id="middleInfoSection">
+                    <h2>What You Get ?</h2>
 
                     <dl>
                         
-                        <dt><i class="fab fa-accessible-icon fa-2x"></i> <!-- float left & pr1rem-->
-                            COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpress Theme</dd>
-                    
-                        
-                        <dt><i class="fas fa-american-sign-language-interpreting fa-2x"></i> <!-- float left & pr1rem-->
-                            COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpress Theme</dd>
-
-                        
                         <dt><i class="fab fa-angellist fa-2x"></i> <!-- float left & pr1rem-->
                             COLORFUL & COMPACT</dt> <!-- margin: 0-->
-                        <dd>Portfolio Wordpress Theme</dd>
+                        <dd><small> Portfolio Wordpress Theme</small></dd>
+                    
+                        
+                        <dt><i class="fas fa-train fa-2x"></i> <!-- float left & pr1rem-->
+                            VERY EASY TO USE</dt> <!-- margin: 0-->
+                        <dd><small>Pagebuilder and Shortcodes</small></dd>
+
+                        
+                        <dt><i class="fab fa-accessible-icon fa-2x"></i> <!-- float left & pr1rem-->
+                            CODED WITH FEET</dt> <!-- margin: 0-->
+                        <dd><small>Create custom Skin in Minutes</small></dd>
                     </dl>
                 </div>
                 <div>
@@ -85,21 +88,21 @@
                         <i class="fas fa-plus"></i>
                         NULLA CONSEQUAT MASSA
                     </summary>
-                    <p>Révélés</p>
+                    <small>Lorem ispum blabla blabla blabla blabla </small>
                 </details>
                 <details>
                     <summary>
                         <i class="fas fa-plus"></i>
                         VIVAMUS ELEMENTUM SEMPER
                     </summary>
-                    <p>Révélés</p>
+                    <small>Lorem ispum blabla blabla blabla blabla </small>
                 </details>
                 <details>
                     <summary>
                         <i class="fas fa-plus"></i>
                         ETIAM ULTRICIES NISI VEL
                     </summary>
-                    <p>Révélés</p>
+                    <small>Lorem ispum blabla blabla blabla blabla </small>
                 </details>
 
                 </div>
@@ -144,7 +147,7 @@
         
                 <div class="media article-wrapper" >
                     <p id="filters" >
-                        <a id="all">ALL</a>
+                        <a  class="active" id="all">ALL</a>
                         <a id="audio">AUDIO</a>
                         <a id="img">IMAGE</a>
                         <a id="video">VIDEO</a>   
@@ -156,7 +159,7 @@
             </section>
             
             <section class="article-wrapper">
-                <h2>CLIENT TESTIMONIALS</h2>
+                <h2 class="center">CLIENT TESTIMONIALS</h2>
                 <hr>
                 <blockquote class="quote">
                     <img src="assets/img/AvatarBender.png" alt="" class="avatarSizing">
@@ -191,7 +194,7 @@
             </section>
         
             <section class="article-wrapper">
-                <h2>GIVE US YOUR DATAS</h2>
+                <h2 class="center">GIVE US YOUR DATAS</h2>
                 <hr>
                 <form action="" class="flex">
                     <div>
@@ -272,7 +275,7 @@
     </div>
     
 </div>
-    <div class="end article-wrapper">
+    <div class="end">
         <p>Bite my shiny metal ass</p>
         <p> 
             <a href="">Home</a>

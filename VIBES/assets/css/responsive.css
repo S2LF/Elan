@@ -1,0 +1,72 @@
+@media screen and (max-width:1100px){
+
+}
+
+@media screen and (max-width: 800px){
+
+    header{
+        padding:0;
+    }
+
+
+    #topBan{
+        display: none;
+    }
+    #burgerNav{
+        display:initial;
+        position: fixed;
+        background-color: var(--main-color);
+        right: 0.5em;
+        z-index: 1;
+    }
+    header>div{
+        justify-content: flex-end;
+    }
+
+    .menu-mobile{
+        display: flex;
+        flex-direction:column ;
+    }
+
+    nav>a:hover{
+        padding-bottom: 0;
+        margin-left: 0;
+        border-bottom: 0px;
+    /*
+        border-right:3px solid var(--main-color);
+        padding-right:15px;*/
+    } 
+
+    nav{transition: margin-right ease 1.5s;}
+    nav{
+        position: fixed;
+        top: 7em;
+        background-color: var(--main-color);
+        text-align: center;
+        border-radius: 1em;
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        margin-right: -190px;
+        z-index: 1;
+    }
+    nav a {
+        margin: 0.5em 1em;
+    }
+
+
+
+    .ancre{
+        bottom:1em;
+    }
+
+}
+
+@media screen and (max-width:640px){
+
+
+
+
+
+
+}
