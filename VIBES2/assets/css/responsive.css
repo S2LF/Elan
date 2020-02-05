@@ -1,0 +1,134 @@
+@media screen and (max-width:1100px){
+
+}
+
+@media screen and (max-width: 800px){
+
+/* Header  */
+    header{
+        padding:0;
+    }
+
+/* Disparition bannière */
+    #topBan{
+        display: none;
+    }
+    #burgerNav{
+        display:initial;
+        position: fixed;
+        background-color: var(--main-color);
+        right: 0.5em;
+        z-index: 1;
+    }
+    header>div{
+        justify-content: flex-end;
+    }
+
+
+/* Gestion du burger button et du nav sur mobile */
+    .menu-mobile{
+        display: flex;
+        flex-direction:column ;
+    }
+
+    nav>a:hover{
+        padding-bottom: 0;
+        margin-left: 0;
+        border-bottom: 0px;
+
+    } 
+
+    nav{transition: margin-right ease 1.5s;}
+    nav{
+        position: fixed;
+        top: 7em;
+        background-color: var(--main-color);
+        text-align: center;
+        border-radius: 1em;
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        margin-right: -190px;
+        z-index: 1;
+    }
+    nav a {
+        margin: 0.5em 1em;
+    }
+
+/* padding Wrapper moins large */
+
+    .article-wrapper {
+        padding: 1em 3em;
+    }
+
+/* Section infos */
+    #infos{
+        display: block;
+    }
+    #middleInfoSection{
+        margin: 0;
+        padding: 1em 0;
+    }
+
+/* Gallery prends toute la largeur  */
+    .boxsize{
+        width: 100%;
+    }
+    .media{
+        display: none;
+    }
+
+/* Blockquotes */
+
+    blockquote{
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    #center_quote{
+        text-align: center;
+    }
+    #center_quote img {
+        float:initial;
+    }
+    .avatarSizing{
+        float:initial
+    }
+    .become{
+        padding: 3em 0;
+    }
+
+/* Section gif_neige */
+    .buttons{
+        padding: 0.75em;
+    }
+
+/* Formulaire */
+    form.flex{
+        display: initial;
+        text-align: center;
+    }
+    form.flex > div:first-child, form.flex > div:last-child{
+        padding: 0;
+    }
+
+/* Footer */
+
+    footer.flex{
+        display: block;
+        text-align: center;
+    }
+    footer hr{
+        margin: auto;
+    }
+    footer article.articleCentre{
+        margin: 0;
+    }
+
+/* Replace l'ancre fixe en bas à droite */
+    .ancre{
+        bottom:1em;
+    }
+
+
+}
