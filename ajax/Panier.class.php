@@ -6,11 +6,7 @@
         
         //["id" => ["produit" => array, "quantite" = X], ["id" => ["produit" => array, "quantite" = X]]
 
-        public function __construct($id){
-
-            $this->addLine($id);
-        }
-
+      
         private function connectBDD(){
             //connexion à la BDD
             try{

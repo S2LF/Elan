@@ -21,18 +21,11 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `id_produit` int(11) NOT NULL AUTO_INCREMENT,
   `nom_produit` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
   `prix_produit` float NOT NULL DEFAULT '0',
-  `img_produit` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `img_produit` char(50) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id_produit`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Listage des données de la table shop.produit : ~3 rows (environ)
-DELETE FROM `produit`;
-/*!40000 ALTER TABLE `produit` DISABLE KEYS */;
-INSERT INTO `produit` (`id_produit`, `nom_produit`, `prix_produit`, `img_produit`) VALUES
-	(1, 'PlayStation 4', 399.9, 'ps4.png'),
-	(2, 'Xbox One S', 249.99, NULL),
-	(3, 'Nintendo Switch', 319.99, 'nswi.png');
-/*!40000 ALTER TABLE `produit` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

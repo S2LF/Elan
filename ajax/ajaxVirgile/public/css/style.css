@@ -1,0 +1,61 @@
+#shop{
+    
+}
+#produits{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+#produits article{
+    flex:1;
+}
+
+#produit{
+    display: flex;
+    flex: 1;
+}
+#produit figure{
+    border: 2px solid #aaa;
+}
+#qtt{
+    width: 3em;
+    text-align: center;
+}
+
+
+#panier{
+    border: 1px solid #888;
+    min-width: 300px;
+}
+#panier h2{
+    text-align: center;
+}
+
+#message{
+    display: none;
+    position: fixed;
+    width: 100%;
+    background: #42f978;
+    top: 0;
+}
+
+#loader{
+    display: none;
+    position: absolute;
+    font-size: 4em;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+    
+}
+
+#panier table{
+    width: 100%;
+}
+
+#panier table td{
+    padding: 0.5em;
+}

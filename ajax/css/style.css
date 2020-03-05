@@ -1,6 +1,9 @@
 #shop{
     display: flex;
 }
+img{
+    width:150px;
+}
 #produits{
     flex: 1;
     display: flex;
